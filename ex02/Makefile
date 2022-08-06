@@ -6,13 +6,15 @@
 #    By: merlich <merlich@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/09 17:49:07 by merlich           #+#    #+#              #
-#    Updated: 2022/07/09 18:07:55 by merlich          ###   ########.fr        #
+#    Updated: 2022/08/06 21:54:02 by merlich          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	a.out
 
 SRCS		=	main.cpp Fixed.cpp
+
+HEADER		=	Fixed.hpp
 
 OBJS		=	${SRCS:.cpp=.o}
 
@@ -22,7 +24,7 @@ CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 RM			=	rm -f
 
-%.o:		%.cpp
+%.o:		%.cpp Makefile ${HEADER}
 			${CPP} ${CPPFLAGS} -c $< -o $@
 
 all:		${NAME}
