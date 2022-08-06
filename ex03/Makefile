@@ -6,7 +6,7 @@
 #    By: merlich <merlich@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/09 17:49:07 by merlich           #+#    #+#              #
-#    Updated: 2022/08/06 21:55:44 by merlich          ###   ########.fr        #
+#    Updated: 2022/08/06 23:22:50 by merlich          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ ${NAME}:	${OBJS} Makefile
 -include ${D_FILES}
 
 clean:
-			${RM} ${OBJS}
+			${RM} ${OBJS} ${D_FILES}
 
 fclean:		clean
 			${RM} ${NAME}
